@@ -20,7 +20,13 @@
         </h1>
       </div>
 
-      <nav id="nav-bar" role="navigation">
+      <div class="burger-menu">
+        <div class="burger-menu__line1"></div>
+        <div class="burger-menu__line2"></div>
+        <div class="burger-menu__line3"></div>
+      </div>
+
+      <nav id="nav-bar" class="nav" role="navigation">
         <ul class="nav-list flexCenter">
           <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
@@ -38,7 +44,7 @@
           alt="a trombone image as background cover">
       </div>
 
-      <form id="form" action="">
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method=”POST”>
         <h2>Handcrafted, <span>Home-Made Masterpieces</span></h2>
         <div class="form-group">
           <input type="email" id="email" placeholder="Enter your email adress">
@@ -92,11 +98,78 @@
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section flexColCenter">
       <h2 class="section__title">Services</h2>
+
+      <iframe id="video" src="https://www.youtube.com/embed/y8Yv4pnO7qc" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </section>
 
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section__title">Pricing</h2>
+
+        <div class="pricing__cards flexSpaceBetween">
+          <div class="pricing__card flexColCenter">
+            <h3 class="pricing__card__header">TENOR TROMBONE</h3>
+
+            <ul class="pricing__card__features">
+              <li class="pricing__card__feature">$600</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+              <li class="pricing__card__feature">Lorem ipsum dolor.</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+            </ul>
+
+            <button role="button" class="pricing__card__btn">SELECT</button>
+          </div>
+
+          <div class="pricing__card flexColCenter">
+            <h3 class="pricing__card__header">BASS TROMBONE</h3>
+
+            <ul class="pricing__card__features">
+              <li class="pricing__card__feature">$900</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+              <li class="pricing__card__feature">Lorem ipsum dolor.</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+            </ul>
+
+            <button role="button" class="pricing__card__btn">SELECT</button>
+          </div>
+
+          <div class="pricing__card  flexColCenter">
+            <h3 class="pricing__card__header">VALVE TROMBONE</h3>
+
+            <ul class="pricing__card__features">
+              <li class="pricing__card__feature">$1200</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+              <li class="pricing__card__feature">Lorem ipsum dolor.</li>
+              <li class="pricing__card__feature">Lorem ipsum.</li>
+            </ul>
+
+            <button role="button" class="pricing__card__btn">SELECT</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer role="footer" class="footer">
+    <div class="container">
+      <ul class="footer__list flexCenter">
+        <li class="footer__list__item"><a href="javascript:;" class="footer__list__link">Privacy
+          </a></li>
+        <li class="footer__list__item"><a href="javascript:;" class="footer__list__link">Terms</a></li>
+        <li class="footer__list__item"><a href="javascript:;" class="footer__list__link">Contact</a></li>
+      </ul>
+      <p>Copyright 2016, Original Trombones</p>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
 </body>
 
 </html>

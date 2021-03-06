@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #301f1f;
+  background-color: #1c1c1c;
   scroll-behavior: smooth;
 }
 
@@ -23,8 +23,13 @@ input {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  color: aliceblue;
+  color: rgb(240, 232, 232);
 }
+
+button, input[type='submit'] {
+  cursor: pointer;
+}
+
 
 .container {
   width: 100%;
@@ -35,6 +40,13 @@ input {
 
 .flexCenter {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColCenter {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -54,15 +66,25 @@ input {
   z-index: 10;
 }
 
+@media only screen and (max-width: 800px)  {
+  #header {
+    flex-direction: column;
+    justify-content: start;
+    /* height: 400px; */
+  }
+}
+
 .logo {
   width: 30rem;
 }
 
-/* #header .logo a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+@media only screen and (max-width: 800px)  {
+  .logo {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 20rem;
+  }
+}
 
 .logo #header-img {
   width: 100%;
@@ -76,11 +98,43 @@ input {
   margin-left: 6rem;
 }
 
+
+
 .nav-list .nav-link {
+  padding: 1rem 0;
   font-weight: 700;
   box-sizing: border-box;
   text-decoration: none;
-  color: aliceblue;
+  color: #fff;
+  border: 0;
+  transition: border 0.3s ease-in-out;
+}
+
+.nav-list .nav-link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+@media only screen and (max-width: 800px)  {
+  .nav {
+    display: none;
+  }
+
+  .nav-item {
+    margin-bottom: 3rem;
+  }
+}
+
+.collapse-nav {
+  display: block;
+  position: absolute;
+  top: -260px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dd1717;
+  color: #fff;
+  width: 100%;
+  z-index: 22;
+  margin-top: 400px;
 }
 
 .hero {
@@ -179,3 +233,152 @@ input {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+#services {
+  background-color: #6e6a6a;
+}
+
+#video {
+  width: 760px;
+  height: 516px;
+}
+
+@media only screen and (max-width: 800px)  {
+  #video {
+    width: 460px;
+    height: 316px;
+  }
+}
+
+.pricing__card {
+  width: 29.5rem;
+  padding-bottom: 4rem;
+  background-color: #6e6a6a;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 8px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing__card:hover {
+  transform: translateY(-2px);,
+}
+
+.pricing__card__header {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #dd1717;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing__card__features {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing__card__feature:first-of-type {
+  color: #1c1c1c;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.pricing__card__feature {
+  margin-bottom: 1rem;
+}
+
+.pricing__card__btn {
+  width: 10rem;
+  padding: 0.6rem 2rem;
+  background-color: transparent;
+  border: 2px solid #ffd72f;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #ffd72f;
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing__card:hover .pricing__card__btn {
+  background-color: #ffd72f;
+  color: #1c1c1c;
+}
+
+@media only screen and (max-width: 800px)  {
+  .pricing__cards {
+    flex-direction: column;
+  }
+
+  .pricing__card {
+    margin:0 0 5rem 0;
+  }
+}
+
+.footer {
+  background-color: #dd1717;
+  padding: 3rem 0;
+  text-align: right;
+}
+
+.footer .footer__list {
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+.footer .footer__list__link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 3rem;
+}
+
+
+.burger-menu {
+  width: 4rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  z-index: 33;
+  
+}
+
+@media only screen and (max-width: 800px)  {
+  .burger-menu {
+    visibility: visible;
+  }
+}
+
+.burger-menu__line1,
+.burger-menu__line2,
+.burger-menu__line3 {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+}
+
+.burger-menu.open-nav .burger-menu__line1 {
+  transform: rotate(40deg);
+  transform-origin: left;
+}
+
+.burger-menu.open-nav .burger-menu__line2 {
+  height: 0;
+  width: 0;
+}
+
+.burger-menu.open-nav .burger-menu__line3 {
+  transform: rotate(-40deg);
+  transform-origin: left;
+}
+
