@@ -16,6 +16,7 @@ html {
 body {
   background-color: #1c1c1c;
   scroll-behavior: smooth;
+  line-height: 1;
 }
 
 body,
@@ -70,7 +71,6 @@ button, input[type='submit'] {
   #header {
     flex-direction: column;
     justify-content: start;
-    /* height: 400px; */
   }
 }
 
@@ -127,7 +127,7 @@ button, input[type='submit'] {
 .collapse-nav {
   display: block;
   position: absolute;
-  top: -260px;
+  top: -262px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #dd1717;
@@ -171,6 +171,12 @@ button, input[type='submit'] {
   text-shadow: black 0 13px 23px;
 }
 
+@media only screen and (max-width: 512px)  {
+  #form h2 {
+    font-size: 3rem;
+  }
+}
+
 #form h2 span {
   display: block;
 }
@@ -178,6 +184,13 @@ button, input[type='submit'] {
 #form .form-group {
   width: 40%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 512px)  {
+  #form .form-group {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
 
 #form #email {
@@ -239,14 +252,13 @@ button, input[type='submit'] {
 }
 
 #video {
-  width: 760px;
+  width: 560px;
   height: 516px;
 }
 
-@media only screen and (max-width: 800px)  {
+@media only screen and (max-width:480px) {
   #video {
-    width: 460px;
-    height: 316px;
+    width: 100%;
   }
 }
 
